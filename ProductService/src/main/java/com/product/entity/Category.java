@@ -24,9 +24,8 @@ public class Category {
     private Category parentCategory;
 
 
-    @ManyToOne(mappedBy="category")
+    @OneToMany(mappedBy="category")
     public List<Product> products;
-    private int parent_category_id;
     private String image_url;
     private boolean is_active;
 

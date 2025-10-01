@@ -25,7 +25,7 @@ public class Product {
     private String sku;
 
     @ManyToOne
-    @Column(name="category_id")
+    @JoinColumn(name="category_id")
     private Category category;
     
     private String brand;

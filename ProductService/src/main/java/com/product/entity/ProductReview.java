@@ -1,9 +1,6 @@
 package com.product.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -16,7 +13,9 @@ public class ProductReview {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    @ManyToOne
+    @JoinColumn(name="product_id")  // ADD THIS - missing product relationship
+    private Product product;
     private String user_id;
     private Integer rating;
     private String comment;

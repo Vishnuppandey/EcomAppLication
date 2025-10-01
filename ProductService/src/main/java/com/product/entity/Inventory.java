@@ -16,7 +16,7 @@ public class Inventory {
     @JoinColumn(name="product_id")
     private Product product;
 
-    private Integer quality_available;
+    private Integer quantity_available;
     private Integer reserved_quantity;
     private Integer low_stock_threshold;
 
