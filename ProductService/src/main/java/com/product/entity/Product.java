@@ -8,6 +8,7 @@ import java.sql.Blob;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.Map;
 
 @Entity(name="products")
 @Data
@@ -15,7 +16,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String UUID;
+    private Long id;
 
     private String name;
     private String description;
@@ -30,7 +31,7 @@ public class Product {
     
     private String brand;
     private Blob image;
-    private HashMap<String,String> specifications;
+    private Map<String,String> specifications;
     private String status;
     private LocalDateTime created_at;
     private LocalDateTime updated_at;
